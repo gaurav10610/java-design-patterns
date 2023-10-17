@@ -4,25 +4,20 @@ import java.util.Arrays;
 
 public class MainClass {
 
-  public static void main(String[] args) {
-    
-    Student student1 = new Student("Gaurav", 1, "IT");
-    Student student2 = new Student("Prabhat", 2, "IT");
-    Student student3 = new Student("Himanshu", 3, "IT");
-    Student student4 = new Student("Shubham", 1, "CS");
-    Student student5 = new Student("Paras", 1, "CS");
-    Student student6 = new Student("Suman", 1, "ME");
-    Student student7 = new Student("Priya", 1, "ME");
-    Student student8 = new Student("Gauri", 1, "ME");
+	public static void main(String[] args) {
 
-    Department department1 = new Department("IT", Arrays.asList(student1, student2, student3));
-    Department department2 = new Department("CS", Arrays.asList(student4, student5));
-    Department department3 = new Department("ME", Arrays.asList(student6, student7, student8));
+		Department department1 = new Department("IT", Arrays.asList(new Student("Gaurav", 1, "IT"),
+				new Student("Prabhat", 2, "IT"), new Student("Himanshu", 3, "IT")));
+		
+		Department department2 = new Department("CS",
+				Arrays.asList(new Student("Shubham", 1, "CS"), new Student("Paras", 1, "CS")));
+		
+		Department department3 = new Department("ME", Arrays.asList(new Student("Shikha", 1, "ME"),
+				new Student("Priya", 1, "ME"), new Student("Gauri", 1, "ME")));
 
-    Institute institute =
-        new Institute("KNIT", Arrays.asList(department1, department2, department3));
-    System.out
-        .print("Total Number of students in the institute are: " + institute.getTotalStudents());
-  }
+		Institute institute = new Institute("KNIT", Arrays.asList(department1, department2, department3));
+		
+		System.out.printf("Total Number of students in the institute are: %s", institute.getTotalStudents());
+	}
 
 }

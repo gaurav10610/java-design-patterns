@@ -1,22 +1,36 @@
 package creational.singleton;
 
+import java.util.UUID;
+
 public class SingletonClass {
 
-  private String name;
+	private String instanceId;
 
-  private static SingletonClass obj = null;
+	/**
+	 * 
+	 * volatile keyword is needed so that the variable should always be read/written
+	 * from main memory
+	 * 
+	 */
+	private static volatile SingletonClass instance;
 
-  private SingletonClass() {}
+	private SingletonClass(String instanceId) {
+		this.instanceId = instanceId;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public String getInstanceId() {
+		return instanceId;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public static SingletonClass getInstance() {
-    return obj == null ? new SingletonClass() : obj;
-  }
+	public static SingletonClass getInstance() {
+		if (instance == null) {
+			synchronized (SingletonClass.class) {
+				if (instance == null) {
+					instance = new SingletonClass(UUID.randomUUID().toString());
+				}
+			}
+			return instance;
+		}
+		return instance;
+	}
 }
