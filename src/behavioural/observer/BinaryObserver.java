@@ -2,15 +2,15 @@ package behavioural.observer;
 
 public class BinaryObserver extends Observer {
 
-  private Subject subject;
+	private Subject subject;
 
-  public BinaryObserver(Subject subject) {
-    this.subject = subject;
-    this.subject.attach(this);
-  }
+	public BinaryObserver(Subject subject) {
+		this.subject = subject;
+		this.subject.attach(this);
+	}
 
-  @Override
-  public void update() {
-    System.out.println("Binary String: " + Integer.toBinaryString(subject.getState()));
-  }
+	@Override
+	public void update() {
+		System.out.println("Binary String: " + Integer.toBinaryString(subject.getState()));
+	}
 }

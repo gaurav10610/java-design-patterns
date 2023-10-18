@@ -5,13 +5,13 @@ import java.util.List;
 
 public class CareTaker {
 
-  private List<Momento> list = new ArrayList<Momento>();
+	private List<Momento> list = new ArrayList<Momento>();
 
-  public void add(Momento momento) {
-    list.add(momento);
-  }
+	public void add(Momento momento) {
+		list.add(momento);
+	}
 
-  public Momento getState(int index) {
-    return list.get(index);
-  }
+	public Momento getState(int index) {
+		return list.get(index);
+	}
 }

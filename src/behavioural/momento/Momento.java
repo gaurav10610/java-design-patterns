@@ -2,14 +2,14 @@ package behavioural.momento;
 
 public class Momento {
 
-  private String state;
+	private String state;
 
-  public Momento(String state) {
-    this.state = state;
-  }
+	public Momento(String state) {
+		this.state = state;
+	}
 
-  public String getState() {
-    return state;
-  }
-  
+	public String getState() {
+		return state;
+	}
+
 }
