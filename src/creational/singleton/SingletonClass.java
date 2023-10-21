@@ -2,7 +2,7 @@ package creational.singleton;
 
 import java.util.UUID;
 
-public class SingletonClass {
+public class SingletonClass implements Cloneable {
 
 	private String instanceId;
 
@@ -32,5 +32,13 @@ public class SingletonClass {
 			return instance;
 		}
 		return instance;
+	}
+
+	/**
+	 * protect singleton class from cloning
+	 */
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		throw new CloneNotSupportedException();
 	}
 }
