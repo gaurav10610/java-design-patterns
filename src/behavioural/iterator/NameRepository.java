@@ -2,7 +2,11 @@ package behavioural.iterator;
 
 public class NameRepository implements Container {
 
-	public String names[] = { "Robert", "John", "Julie", "Lora" };
+	public String names[];
+
+	public NameRepository(String[] names) {
+		this.names = names;
+	}
 
 	@Override
 	public Iterator getIterator() {
@@ -12,6 +16,10 @@ public class NameRepository implements Container {
 	private class NameIterator implements Iterator {
 
 		private int index;
+
+		private NameIterator() {
+			index = 0;
+		}
 
 		@Override
 		public boolean hasNext() {

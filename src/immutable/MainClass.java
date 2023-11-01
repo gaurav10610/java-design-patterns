@@ -7,11 +7,19 @@ public class MainClass {
 
 		System.out.println(car);
 
+		System.out.println("car cover: " + car.getCover());
+
+		// update engine name which should not be reflected in immutable object
+		Engine engine = car.getEngine();
+		engine.setEngineName("Toyota 2.0L");
+		engine.setModelYear(2021);
+
+		System.out.println("car engine: " + car.getEngine());
+
 		try {
 			@SuppressWarnings("unused")
 			Car cloneCar = (Car) car.clone();
 		} catch (CloneNotSupportedException e) {
-			System.out.println("car is an immutable object, clone not supported");
 			e.printStackTrace();
 		}
 	}

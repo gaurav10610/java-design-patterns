@@ -15,7 +15,7 @@ public final class Car implements Cloneable {
 	}
 
 	public Engine getEngine() {
-		return new Engine(engine.getEngineName(), engine.getModelYear());
+		return (Engine) engine.clone();
 	}
 
 	@Override

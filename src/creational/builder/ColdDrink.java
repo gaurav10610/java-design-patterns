@@ -2,7 +2,7 @@ package creational.builder;
 
 public abstract class ColdDrink implements Item {
 
-  public Packing getPacking() {
-    return new Bottle();
-  }
+	public Packing getPacking() {
+		return new Bottle();
+	}
 }

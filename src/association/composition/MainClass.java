@@ -2,6 +2,14 @@ package association.composition;
 
 import java.util.Arrays;
 
+/**
+ * 
+ * Composition is a strong from of association.
+ * 
+ * In a composition relationship, the associated objects cannot exist
+ * independently within the scope of the system.
+ * 
+ */
 public class MainClass {
 
 	public static void main(String[] args) {

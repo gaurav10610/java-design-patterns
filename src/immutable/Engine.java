@@ -1,6 +1,6 @@
 package immutable;
 
-public class Engine {
+public class Engine implements Cloneable {
 
 	private String engineName;
 	private Integer modelYear;
@@ -24,6 +24,11 @@ public class Engine {
 
 	public void setModelYear(Integer modelYear) {
 		this.modelYear = modelYear;
+	}
+
+	@Override
+	public Object clone() {
+		return new Engine(engineName, modelYear);
 	}
 
 	@Override
