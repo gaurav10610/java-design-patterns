@@ -2,9 +2,9 @@ package solid.dependencyinversion;
 
 public class PersonalDesktop {
 
-	private Monitor monitor;
+	private final Monitor monitor;
 
-	private Keyboard keyboard;
+	private final Keyboard keyboard;
 
 	public PersonalDesktop(Monitor monitor, Keyboard keyboard) {
 		this.monitor = monitor;

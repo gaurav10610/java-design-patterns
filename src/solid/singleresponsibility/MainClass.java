@@ -1,5 +1,8 @@
 package solid.singleresponsibility;
 
+/**
+ * A class should only have one responsibility. Furthermore, it should only have one reason to change.
+ */
 public class MainClass {
 
 	public static void main(String[] args) {

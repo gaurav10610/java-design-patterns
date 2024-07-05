@@ -6,4 +6,5 @@
  *
  */
 module DesignPatterns {
+    requires java.net.http;
 }
