@@ -1,8 +1,8 @@
 package structural.decorator;
 
-public class RedShapeDecorator extends ShapeDecorator {
+public class RedBorderShape extends ShapeDecorator {
 
-	protected RedShapeDecorator(Shape shape) {
+	protected RedBorderShape(Shape shape) {
 		super(shape);
 	}
 

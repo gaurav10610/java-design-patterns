@@ -5,8 +5,8 @@ public class MainClass {
 	public static void main(String[] args) {
 		Subject subject = new Subject();
 
-		new OctalObserver(subject);
-		new BinaryObserver(subject);
+		subject.subscribe(new OctalObserver());
+		subject.subscribe(new BinaryObserver());
 
 		System.out.println("First state change: 15");
 		subject.setState(15);

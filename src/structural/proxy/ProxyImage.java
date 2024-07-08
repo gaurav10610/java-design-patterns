@@ -4,8 +4,8 @@ public class ProxyImage implements Image {
 
 	private RealImage realImage;
 
-	public ProxyImage(String fileName) {
-		this.realImage = new RealImage(fileName);
+	public ProxyImage(RealImage realImage) {
+		this.realImage = realImage;
 	}
 
 	@Override

@@ -1,5 +1,9 @@
 package immutable;
 
+/**
+ * An immutable class is a class whose state cannot be modified after it is created. Once an object of an immutable
+ * class is constructed, its internal data remains constant throughout its lifetime.
+ */
 public class MainClass {
 
 	public static void main(String[] args) {

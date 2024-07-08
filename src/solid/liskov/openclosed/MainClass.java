@@ -1,4 +1,4 @@
-package solid.openclosed;
+package solid.liskov.openclosed;
 
 /**
  *

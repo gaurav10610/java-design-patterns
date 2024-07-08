@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Subject {
 
-	private List<Observer> observers = new ArrayList<Observer>();
+	private final List<StateObserver> observers = new ArrayList<>();
 	private int state;
 
 	public int getState() {
@@ -17,13 +17,13 @@ public class Subject {
 		notifyAllObservers();
 	}
 
-	public void attach(Observer observer) {
+	public void subscribe(StateObserver observer) {
 		observers.add(observer);
 	}
 
 	public void notifyAllObservers() {
 		observers.parallelStream().forEach((observer) -> {
-			observer.update();
+			observer.update(state);
 		});
 	}
 }
