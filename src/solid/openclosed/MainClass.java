@@ -1,9 +1,11 @@
-package solid.liskov.openclosed;
+package solid.openclosed;
 
 /**
  *
- * Classes should be open for extension but closed for modification. In doing so, we stop ourselves from
- * modifying existing code and causing potential new bugs in an otherwise happy application.
+ * Classes should be open for extension but closed for modification. In doing
+ * so, we stop ourselves from
+ * modifying existing code and causing potential new bugs in an otherwise happy
+ * application.
  *
  */
 public class MainClass {

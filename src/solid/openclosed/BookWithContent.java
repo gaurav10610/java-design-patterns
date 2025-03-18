@@ -1,4 +1,4 @@
-package solid.liskov.openclosed;
+package solid.openclosed;
 
 public class BookWithContent extends Book {
 

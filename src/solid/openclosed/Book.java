@@ -1,9 +1,9 @@
-package solid.liskov.openclosed;
+package solid.openclosed;
 
 public class Book {
-	
+
 	private String name;
-	
+
 	private String author;
 
 	public String getName() {
